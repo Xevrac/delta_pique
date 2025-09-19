@@ -25,7 +25,7 @@ jobs:
           
       - name: Build and Push
         run: |
-          IMAGE_NAME=ghcr.io/${{ github.repository_owner }}/piqueserver:latest
+          IMAGE_NAME=ghcr.io/xevrac/piqueserver:latest
           IMAGE_NAME=$(echo "$IMAGE_NAME" | tr '[:upper:]' '[:lower:]')
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
