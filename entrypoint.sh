@@ -5,4 +5,4 @@ set -e
 export PYTHONPATH="/home/container/:/mnt/server/:$PYTHONPATH"
 
 # Run piqueserver using the system's python3 binary.
-exec python3 -m piqueserver
+exec python3.11 -m piqueserver
