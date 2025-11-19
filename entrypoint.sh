@@ -1,4 +1,7 @@
 #!/bin/bash
-# Use venv
+
+# Source the virtual environment to update the PATH and other variables
 source /mnt/server/venv/bin/activate
-exec python -m piqueserver
+
+# Run piqueserver.
+python -m piqueserver
