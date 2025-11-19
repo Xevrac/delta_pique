@@ -1,4 +1,8 @@
 #!/bin/bash
-# Use venv
-source /mnt/server/venv/bin/activate
-exec python -m piqueserver
+set -e
+
+# The `piqueserver` package was installed here using --target=/mnt/server
+export PYTHONPATH="/home/container/:/mnt/server/:$PYTHONPATH"
+
+# Run piqueserver using the system's python3 binary.
+exec python3.11 -m piqueserver
