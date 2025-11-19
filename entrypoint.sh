@@ -1,7 +1,8 @@
 #!/bin/bash
+set -e
 
-# Source the virtual environment to update the PATH and other variables
-source /mnt/server/venv/bin/activate
+# The `piqueserver` package was installed here using --target=/mnt/server
+export PYTHONPATH="/mnt/server:$PYTHONPATH"
 
-# Run piqueserver.
-python -m piqueserver
+# Run piqueserver using the system's python3 binary.
+exec python3 -m piqueserver
