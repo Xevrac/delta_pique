@@ -53,7 +53,7 @@ server_prefix = "[Console]"
 max_connections_per_ip = 3
 
 # port the server will listen on (default: 32887)
-port = 32887
+port =
 
 # interface the server will listen on (default: all interfaces)
 # TODO: document enet specific strangeness
