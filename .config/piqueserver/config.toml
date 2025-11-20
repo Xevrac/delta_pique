@@ -280,8 +280,8 @@ profile = false
 # game (including map, players, and server information)
 [status_server]
 enabled = false
-port = 32886
-logging = true
+port = 4321
+logging = false
 
 
 # settings for the irc chatbot that can report server events and respond to commands
@@ -300,14 +300,12 @@ password = ""
 commandprefix = "!"
 chatprefix = "."
 
-
-
 [ssh]
 # enable the ssh manhole server
 # gives ssh access to a python repl connected to the running server
 # Do not enable unless you are sure you want to use this!
 #enabled = false
-#port = 32887
+#port = 9876
 
 [ssh.users]
 # user = password
@@ -337,7 +335,7 @@ auto_squad = true
 # allows automatically saving a snapshot of the map on server close
 [savemap]
 # automatically load the saved map on map load
-load_saved_map = true
+load_saved_map = false
 # automatically save map at shutdown
 save_at_shutdown = false
 # automatically save map at map rotation or server shutdown
