@@ -30,7 +30,7 @@ rules = [
 tips = [
         "You are playing %(game_mode)s on %(server_name)s",
         "Type /help for info & commands",
-        "Purchase your own server - https://deltanetworks.au"
+        "Purchase your own server at https://deltanetworks.au"
 ]
 
 # how often the tips should display
@@ -52,24 +52,9 @@ server_prefix = "[Console]"
 #max_connections_per_ip = 0
 max_connections_per_ip = 3
 
-# port the server will listen on (default: 32887)
-port = dummy_port
-
-# interface the server will listen on (default: all interfaces)
-# TODO: document enet specific strangeness
-network_interface = ""
-
-# url that is used to request the server's public ip address
-# it should be a url that returns only the requester's public ip in the response body
-# Set to an empty string if you wish to disable ip requesting
-# WARNING: do not change unless you are sure you know what you are doing
-# other tools if the default is down:
-# https://icanhazip.com/
-# https://api.ipify.org
-#ip_getter = "https://services.buildandshoot.com/getip"
-
 # note: scripts are loaded in order entered here. Some scripts may depend on
 # other scripts being loaded before them.
+# Scripts are loaded from home > container > piqueserver > scripts directory.
 scripts = [
  "piqueserver.scripts.rollback",
  "piqueserver.scripts.protect",
@@ -83,7 +68,8 @@ scripts = [
  "piqueserver.scripts.squad",
  "piqueserver.scripts.afk",
  "piqueserver.scripts.votemap",
- "piqueserver.scripts.medkit"
+ "piqueserver.scripts.medkit",
+ "piqueserver.scripts.bots"
 ]
 
 # number of /login attempts allowed before players are auto-kicked (default: 1)
@@ -103,6 +89,19 @@ rotation = [
   "chokepoint",
   "bridgewars"
 ]
+
+# interface the server will listen on (default: all interfaces)
+# TODO: document enet specific strangeness
+network_interface = ""
+
+# url that is used to request the server's public ip address
+# it should be a url that returns only the requester's public ip in the response body
+# Set to an empty string if you wish to disable ip requesting
+# WARNING: do not change unless you are sure you know what you are doing
+# other tools if the default is down:
+# https://icanhazip.com/
+# https://api.ipify.org
+#ip_getter = "https://services.buildandshoot.com/getip"
 
 # whether next map for a new game will be chosen at random
 # if this is false, maps will cycle in order listed in the rotation list
@@ -187,6 +186,9 @@ command_ratelimit_period = "5s"
 # Set this to true to automatically log all players in as admin on join.
 # Possibly useful for testing purposes.
 #everyone_is_admin = false
+
+# port the server will listen on (default: 32887)
+port = dummy_port
 
 [team1]
 # information about the team1
@@ -364,9 +366,11 @@ ban_duration = "30min"
 
 public_votes = true
 
-
 # piqueserver.scripts.votemap
 [votemap]
+
+# piqueserver.scripts.bots
+[bots]
 
 # publically display which map players voted for
 public_votes = true
