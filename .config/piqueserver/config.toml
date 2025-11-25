@@ -2,7 +2,7 @@
 # Template last modified 25112025
 # Author Rhys
 
-# DO NOT EDIT #############################################################################################################
+# DO NOT EDIT - SEE END OF SECTION FOR EDITS ###########################################################################
 
 # These settings must not be changed here
 # Edit these parameters from the Startup Parameters page 
@@ -12,9 +12,6 @@
 
 # port the server will listen on (default: 32887)
 port = dummy_port
-
-# server name - displayed on master server
-name = "A Delta Networks Server"
 
 # SERVER
 # set this if the server should register on the master server list
@@ -79,6 +76,9 @@ cap_limit = 8
 # All other settings can be adjusted on the Startup Parameters page 
 # This page is found on the main Game Panel page of your server 
 # For more information visit: https://docs.deltanetworks.au/s/c/doc/startup-parameters-6n4n1sQ2TP
+
+# server name - displayed on master server
+name = "A Delta Networks Server"
 
 # messages sent when user joins server
 motd = [
