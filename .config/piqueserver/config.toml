@@ -2,6 +2,78 @@
 # Template last modified 25112025
 # Author Rhys
 
+# DO NOT EDIT #############################################################################################################
+
+# These settings must not be changed here
+# Edit these parameters from the Startup Parameters page 
+# Editing changes in this section manually do not get changed 
+# The Startup Parameters page is found on the main Game Panel page of your server 
+# For more information visit: https://docs.deltanetworks.au/s/c/doc/startup-parameters-6n4n1sQ2TP
+
+# port the server will listen on (default: 32887)
+port = dummy_port
+
+# server name - displayed on master server
+name = "A Delta Networks Server"
+
+# SERVER
+# set this if the server should register on the master server list
+master = true
+
+# limit max number of players who can join.
+# must be 0 < max_players <= 32
+max_players = 32
+
+# GAME
+# set the game mode. "ctf" and "tc" are built in game modes; others are custom
+# game modes specified by python module or python script in the config game_modes
+# directory (without the '.py' extension).
+# Examples: "piqueserver.game_modes.push", "mygame" (where you have config/game_modes/mygame.py)
+game_mode = "ctf"
+
+# time between player respawn waves
+# (default: 8 seconds)
+respawn_time = "5sec"
+
+# default time limit to set per map. When the time limit runs out, the map rotation is advanced
+default_time_limit = "30mins"
+
+# whether friendly fire is allowed by default
+friendly_fire = false
+
+# If 0, any permutation of teams is allowed. If 1 or greater, team balance is enforced with the algorithm:
+# `abs(team1_players - team2_players) <= balanced_teams`
+# The value is thus the maximum player number difference allowed between teams
+balanced_teams = 2
+
+# time players must wait before switching teams again
+# 0sec disables cooldown time
+teamswitch_interval = "60sec"
+
+# whether players are allowed to switch teams at all
+teamswitch_allowed = true
+
+# how often the tips should display
+tips_frequency = "10min"
+
+# if respawns should happen in waves, or respawn_time seconds after the players death
+respawn_waves = true
+
+# whether next map for a new game will be chosen at random
+# if this is false, maps will cycle in order listed in the rotation list
+random_rotation = true
+
+# controls whether players receive damage by falling from height
+fall_damage = true
+
+# disable users ability to affect the map's initial blocks
+user_blocks_only = false
+
+# number of intel captures to win the game (default: 10)
+cap_limit = 8
+
+# END OF SECTION ##########################################################################################################
+
 # These settings can be changed in this section manually
 # Recommended for advanced users only
 # All other settings can be adjusted on the Startup Parameters page 
@@ -346,75 +418,3 @@ extension_time = "15min"
 player_driven = true
 autoschedule = true
 percentage = 80
-
-# DO NOT EDIT #############################################################################################################
-
-# These settings must not be changed here
-# Edit these parameters from the Startup Parameters page 
-# Editing changes in this section manually do not get changed 
-# The Startup Parameters page is found on the main Game Panel page of your server 
-# For more information visit: https://docs.deltanetworks.au/s/c/doc/startup-parameters-6n4n1sQ2TP
-
-# port the server will listen on (default: 32887)
-port = dummy_port
-
-# server name - displayed on master server
-name = "A Delta Networks Server"
-
-# SERVER
-# set this if the server should register on the master server list
-master = true
-
-# limit max number of players who can join.
-# must be 0 < max_players <= 32
-max_players = 32
-
-# GAME
-# set the game mode. "ctf" and "tc" are built in game modes; others are custom
-# game modes specified by python module or python script in the config game_modes
-# directory (without the '.py' extension).
-# Examples: "piqueserver.game_modes.push", "mygame" (where you have config/game_modes/mygame.py)
-game_mode = "ctf"
-
-# time between player respawn waves
-# (default: 8 seconds)
-respawn_time = "5sec"
-
-# default time limit to set per map. When the time limit runs out, the map rotation is advanced
-default_time_limit = "30mins"
-
-# whether friendly fire is allowed by default
-friendly_fire = false
-
-# If 0, any permutation of teams is allowed. If 1 or greater, team balance is enforced with the algorithm:
-# `abs(team1_players - team2_players) <= balanced_teams`
-# The value is thus the maximum player number difference allowed between teams
-balanced_teams = 2
-
-# time players must wait before switching teams again
-# 0sec disables cooldown time
-teamswitch_interval = "60sec"
-
-# whether players are allowed to switch teams at all
-teamswitch_allowed = true
-
-# how often the tips should display
-tips_frequency = "10min"
-
-# if respawns should happen in waves, or respawn_time seconds after the players death
-respawn_waves = true
-
-# whether next map for a new game will be chosen at random
-# if this is false, maps will cycle in order listed in the rotation list
-random_rotation = true
-
-# controls whether players receive damage by falling from height
-fall_damage = true
-
-# disable users ability to affect the map's initial blocks
-user_blocks_only = false
-
-# number of intel captures to win the game (default: 10)
-cap_limit = 8
-
-# END OF SECTION ##########################################################################################################
